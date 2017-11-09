@@ -327,7 +327,7 @@ FOR_LOOP:
 			c.Logger.Debug("Send Ping")
 			legacy.WriteOctet(packetTypePing, c.bufWriter, &n, &err)
 			c.sendMonitor.Update(int(n))
-			// c.flush
+			// should be c.flush
 			go c.flush()
 			c.Logger.Debug("Starting pong timer")
 			c.pongTimer.Set()
